@@ -3,9 +3,8 @@
 --- !u!181963792 &2655988077585873504
 Preset:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_Name: kinematic
   m_TargetType:
     m_NativeTypeID: 54
@@ -44,4 +43,3 @@ Preset:
     propertyPath: m_CollisionDetection
     value: 0
     objectReference: {fileID: 0}
-  m_ExcludedProperties: []
