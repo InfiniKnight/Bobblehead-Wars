@@ -37,8 +37,15 @@ public class Gun : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform launchPosition;
 
-	// Use this for initialization
-	void Start ()
+    void fireBullet()
+    {
+        GameObject bullet = Instantiate(bulletPrefab) as GameObject;
+        bullet.transform.position = launchPosition.position;
+        bullet.GetComponent<Rigidbody>().velocity = transform.parent.forward * 100;
+    }
+
+    // Use this for initialization
+    void Start ()
     {
 		
 	}
@@ -58,11 +65,4 @@ public class Gun : MonoBehaviour
             CancelInvoke("fireBullet");
         }
 	}
-
-    void fireBullet()
-    {
-        GameObject bullet = Instantiate(bulletPrefab) as GameObject;
-        bullet.transform.position = launchPosition.position;
-        bullet.GetComponent<Rigidbody>().velocity = transform.parent.forward * 100;
-    }
 }
